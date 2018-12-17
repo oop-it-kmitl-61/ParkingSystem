@@ -6,11 +6,14 @@
 ---
 
 # ![](images/help.png) How to use
-1.	เข้าใช้งานที่ไฟล์ชื่อ ParkingSystem.jar อยู่ใน path /dist
 
-2.	สามารถทดลองใช้ โดยใช้รหัส Default คือ Username : admin , Password : admin
+1.	Import parking_database ใน MySQL Workbench เข้า Schema ที่ชื่อว่า parking
 
-3.	ผู้ให้บริการ ( Admin ) สามารถเข้าถึงได้ทุกส่วนในโปรแกรม
+2.	เข้าใช้งานที่ไฟล์ชื่อ ParkingSystem.jar อยู่ใน path /dist
+
+3.	สามารถทดลองใช้ โดยใช้รหัส Default คือ Username : admin , Password : admin
+
+4.	ผู้ให้บริการ ( Admin ) สามารถเข้าถึงได้ทุกส่วนในโปรแกรม
 
 	หน้าที่หลักของ Admin คือการทำ Booking ( จัดการที่จอดรถ )
 	
@@ -22,7 +25,7 @@
 	
 	แต่ Admin ก็สามารถทำการ Check In , Check Out ได้ ( ยามฉุกเฉิน )
 	
-4.	พนักงาน ( Staff ) สามารถเข้าถึงได้แค่ระบบ Check In , Check Out
+5.	พนักงาน ( Staff ) สามารถเข้าถึงได้แค่ระบบ Check In , Check Out
 
 	( เป็นการ Confirm เมื่อลูกค้ามาจอดจริง , ออกจากที่จอดรถจริง และยังสามารถ Cancel ได้เมื่อลูกค้าทำการยกเลิก )
 
