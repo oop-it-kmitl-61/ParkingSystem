@@ -29,12 +29,13 @@
 
 	( เป็นการ Confirm เมื่อลูกค้ามาจอดจริง , ออกจากที่จอดรถจริง และยังสามารถ Cancel ได้เมื่อลูกค้าทำการยกเลิก )
 
-[Full Documentation](https://github.com/.../wiki)
+[Full Documentation](https://github.com/oop-it-kmitl-61/ParkingSystem/wiki)
 
 ---
 
 # ![](images/notebook.png) Library Requirements
 * [MySQL Connectors Library](https://github.com/mysql/mysql-connector-j)
+* [Absolute Layout Library](https://osdn.net/projects/sfnet_printman/downloads/dist/lib/AbsoluteLayout.jar/)
 
 ---
 
