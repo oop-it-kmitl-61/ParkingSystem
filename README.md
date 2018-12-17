@@ -6,7 +6,7 @@
 ---
 
 # ![](images/help.png) How to use
-1.	เข้าใช้งานที่ไฟล์ชื่อ Ui_project.jar อยู่ใน path /dist
+1.	เข้าใช้งานที่ไฟล์ชื่อ ParkingSystem.jar อยู่ใน path /dist
 
 2.	สามารถทดลองใช้ โดยใช้รหัส Default คือ Username : admin , Password : admin
 
