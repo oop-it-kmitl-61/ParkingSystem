@@ -52,22 +52,25 @@
 ![](images/login_blank.jpg)
 
 ## Booking
-![](images/booking.png)
+![](images/booking.jpg)
 
 ## Check In
-![](images/check_in.png)
+![](images/check_in.jpg)
 
 ## Check Out
-![](images/check_out.png)
+![](images/check_out.jpg)
 
 ## Register
-![](images/register.png)
+![](images/register_admin.jpg)
+![](images/register_staff.jpg)
+![](images/register_member.jpg)
 
 ## Profile
-![](images/profile.png)
+![](images/profile_admin_blank.jpg)
+![](images/profile_member_blank.jpg)
 
 ## Setup Database
-![](images/setup_db.png)
+![](images/setup_db_blank.jpg)
 
 ---
 
