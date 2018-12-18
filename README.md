@@ -56,7 +56,7 @@
 ![](images/booking.jpg)
 
 ## Check In
-![](images/check_in.jpg)
+![](images/check_in_2.jpg)
 
 ## Check Out
 ![](images/check_out.jpg)
