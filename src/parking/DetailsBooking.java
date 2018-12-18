@@ -944,11 +944,11 @@ public class DetailsBooking extends javax.swing.JFrame {
     private void bn_bookActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bn_bookActionPerformed
         if(tf_license.getText().equals("")){
             JOptionPane.showMessageDialog(null, "Check license textfiled");
-        }if((Integer) tf_hour.getValue() == 0){
+        }else if((Integer) tf_hour.getValue() == 0){
             JOptionPane.showMessageDialog(null, "Check select hour");
-        }if(tf_name1.getText().equals("")){
+        }else if(tf_name1.getText().equals("")){
             JOptionPane.showMessageDialog(null, "Check name textfiled");
-        }if(tf_phonenumber.getText().equals("")){
+        }else if(tf_phonenumber.getText().equals("")){
             JOptionPane.showMessageDialog(null, "Check phone textfiled");
         }else if(((Integer) tf_hour.getValue() != 0) && (tf_name1.getText() != "") && (tf_phonenumber.getText() != "") && (tf_license.getText() != "")){
             licensetimebook = new ArrayList<Integer>();
