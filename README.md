@@ -11,7 +11,8 @@
 
 2.	เข้าใช้งานที่ไฟล์ชื่อ ParkingSystem.jar อยู่ใน path /dist
 
-3.	สามารถทดลองใช้ โดยใช้รหัส Default คือ Username : admin , Password : admin
+3.	สามารถทดลองใช้ โดยใช้รหัส Default คือ Username admin : admin , Password : admin
+	Username staff : staff , Password : staff
 
 4.	ผู้ให้บริการ ( Admin ) สามารถเข้าถึงได้ทุกส่วนในโปรแกรม
 
