@@ -31,7 +31,7 @@ CREATE TABLE `adminandstaffdata` (
   `pass` varchar(45) NOT NULL,
   `rank` varchar(45) NOT NULL,
   PRIMARY KEY (`idadminandstaffdata`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,7 +40,7 @@ CREATE TABLE `adminandstaffdata` (
 
 LOCK TABLES `adminandstaffdata` WRITE;
 /*!40000 ALTER TABLE `adminandstaffdata` DISABLE KEYS */;
-INSERT INTO `adminandstaffdata` VALUES (1,'fluke','onhan','0837199785','pumy2517','02082515','admin'),(2,'fluke','onhan','0837199785','pumy2515','02082515','staff'),(3,'peerapol','onhan','023173337','admin','12345','admin');
+INSERT INTO `adminandstaffdata` VALUES (1,'adminFname','adminLname','adminPhone','admin','admin','admin'),(2,'fluke','onhan','0837199785','pumy2515','02082515','admin'),(3,'peerapol','onhan','023173337','admin','12345','admin'),(4,'Suthee','Pilamart','0954324446','kpez','12345678','admin'),(5,'Firstname','Lastname','Phone number','DGd','Password','admin'),(6,'Firstname','Lastname','Phone number','Username','Password','Rank'),(7,'staff','staff','staff','staff','staff','staff');
 /*!40000 ALTER TABLE `adminandstaffdata` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-12-17 19:46:51
+-- Dump completed on 2018-12-18 23:10:49

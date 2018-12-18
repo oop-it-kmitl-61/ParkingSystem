@@ -29,7 +29,7 @@ CREATE TABLE `memberdata` (
   `phone` varchar(45) NOT NULL,
   `license` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idmemberdata`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +38,7 @@ CREATE TABLE `memberdata` (
 
 LOCK TABLES `memberdata` WRITE;
 /*!40000 ALTER TABLE `memberdata` DISABLE KEYS */;
-INSERT INTO `memberdata` VALUES (1,'Mez','EIEI','0123456789','กพ 5847'),(2,'Peerapol','Onhan','0837199785','กก1234'),(3,'owen','owen','023173166','พพ 5415'),(4,'พีรพล','อ่อนแฮน','023173337','ฏซ 1587');
+INSERT INTO `memberdata` VALUES (1,'Mez','EIEI','0123456789','กพ 5847'),(2,'Peerapol','Onhan','0837199785','กก1234'),(3,'owen','owen','023173166','พพ 5415'),(4,'พีรพล','อ่อนแฮน','023173337','ฏซ 1587'),(5,'HRK','CH','012345687','69');
 /*!40000 ALTER TABLE `memberdata` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +51,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-12-17 19:46:51
+-- Dump completed on 2018-12-18 23:10:49
