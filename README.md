@@ -30,6 +30,8 @@
 
 	( เป็นการ Confirm เมื่อลูกค้ามาจอดจริง , ออกจากที่จอดรถจริง และยังสามารถ Cancel ได้เมื่อลูกค้าทำการยกเลิก )
 
+[Report](https://github.com/oop-it-kmitl-61/ParkingSystem/blob/master/ParkingSystem_Report.pdf)
+
 [Full Documentation](https://github.com/oop-it-kmitl-61/ParkingSystem/wiki)
 
 ---
