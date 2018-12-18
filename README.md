@@ -76,6 +76,11 @@
 ## Setup Database
 ![](images/setup_db_blank.jpg)
 
+## Staff
+![](images/staff.PNG)
+
+![](images/staff2.PNG)
+
 ---
 
 # ![](images/member.png) Members
