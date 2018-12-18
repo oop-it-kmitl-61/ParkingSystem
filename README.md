@@ -62,11 +62,14 @@
 
 ## Register
 ![](images/register_admin.jpg)
+
 ![](images/register_staff.jpg)
+
 ![](images/register_member.jpg)
 
 ## Profile
 ![](images/profile_admin_blank.jpg)
+
 ![](images/profile_member_blank.jpg)
 
 ## Setup Database
