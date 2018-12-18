@@ -190,6 +190,7 @@ public class Pnl_lot extends javax.swing.JPanel implements MouseListener, MouseM
         bn_custo = new javax.swing.JCheckBox();
 
         setBackground(new java.awt.Color(64, 64, 65));
+        setMaximumSize(new java.awt.Dimension(710, 580));
         setPreferredSize(new java.awt.Dimension(710, 580));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 

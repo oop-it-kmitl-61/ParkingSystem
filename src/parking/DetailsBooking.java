@@ -292,7 +292,7 @@ public class DetailsBooking extends javax.swing.JFrame {
 
         mainpanel.setBackground(new java.awt.Color(153, 153, 255));
 
-        bar.setBackground(new java.awt.Color(62, 16, 136));
+        bar.setBackground(new java.awt.Color(104, 26, 228));
         bar.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
                 barMouseDragged(evt);
@@ -338,9 +338,9 @@ public class DetailsBooking extends javax.swing.JFrame {
         jLabel3.setText("Name :");
 
         tf_license.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        tf_license.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tf_licenseActionPerformed(evt);
+        tf_license.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                tf_licenseFocusGained(evt);
             }
         });
 
@@ -350,9 +350,9 @@ public class DetailsBooking extends javax.swing.JFrame {
         tf_name1.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         tf_name1.setText("-");
         tf_name1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        tf_name1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tf_name1ActionPerformed(evt);
+        tf_name1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                tf_name1FocusGained(evt);
             }
         });
 
@@ -360,9 +360,9 @@ public class DetailsBooking extends javax.swing.JFrame {
         jLabel5.setText("Phone Number:");
 
         tf_other.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
-        tf_other.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tf_otherActionPerformed(evt);
+        tf_other.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                tf_otherFocusGained(evt);
             }
         });
 
@@ -371,9 +371,9 @@ public class DetailsBooking extends javax.swing.JFrame {
 
         tf_phonenumber.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         tf_phonenumber.setText("-");
-        tf_phonenumber.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tf_phonenumberActionPerformed(evt);
+        tf_phonenumber.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                tf_phonenumberFocusGained(evt);
             }
         });
 
@@ -382,19 +382,14 @@ public class DetailsBooking extends javax.swing.JFrame {
 
         tf_date.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         tf_date.setText("Ex. 31/12/2018");
-        tf_date.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                tf_dateMouseClicked(evt);
+        tf_date.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                tf_dateFocusGained(evt);
             }
         });
 
         bn_checkdate.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         bn_checkdate.setText("Check");
-        bn_checkdate.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                bn_checkdateMouseClicked(evt);
-            }
-        });
         bn_checkdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bn_checkdateActionPerformed(evt);
@@ -442,14 +437,9 @@ public class DetailsBooking extends javax.swing.JFrame {
 
         tf_start.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         tf_start.setText("Ex. 12:00");
-        tf_start.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                tf_startMouseClicked(evt);
-            }
-        });
-        tf_start.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tf_startActionPerformed(evt);
+        tf_start.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                tf_startFocusGained(evt);
             }
         });
 
@@ -952,14 +942,14 @@ public class DetailsBooking extends javax.swing.JFrame {
     }//GEN-LAST:event_bn_SearchFromPhoneActionPerformed
 
     private void bn_bookActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bn_bookActionPerformed
-        if((Integer) tf_hour.getValue() == 0){
+        if(tf_license.getText().equals("")){
+            JOptionPane.showMessageDialog(null, "Check license textfiled");
+        }if((Integer) tf_hour.getValue() == 0){
             JOptionPane.showMessageDialog(null, "Check select hour");
         }if(tf_name1.getText().equals("")){
             JOptionPane.showMessageDialog(null, "Check name textfiled");
         }if(tf_phonenumber.getText().equals("")){
             JOptionPane.showMessageDialog(null, "Check phone textfiled");
-        }if(tf_license.getText().equals(""+"-")){
-            JOptionPane.showMessageDialog(null, "Check license textfiled");
         }else if(((Integer) tf_hour.getValue() != 0) && (tf_name1.getText() != "") && (tf_phonenumber.getText() != "") && (tf_license.getText() != "")){
             licensetimebook = new ArrayList<Integer>();
 	    int count = 0;
@@ -982,70 +972,113 @@ public class DetailsBooking extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_bn_bookActionPerformed
 
-    private void tf_startActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_startActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tf_startActionPerformed
-
-    private void tf_startMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tf_startMouseClicked
-        if(tf_start.getText().equals("Ex. 12:00")){
-            tf_start.setText("");
-        }
-        if(tf_date.getText().equals("")){
-            tf_date.setText("Ex. 31/12/2018");
-        }
-    }//GEN-LAST:event_tf_startMouseClicked
-
     private void bn_checkdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bn_checkdateActionPerformed
         timebook = new ArrayList<Integer>();
         setdecolor();
         checkavailbleformdate(tf_date.getText());
     }//GEN-LAST:event_bn_checkdateActionPerformed
-
-    private void bn_checkdateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bn_checkdateMouseClicked
-
-    }//GEN-LAST:event_bn_checkdateMouseClicked
-
-    private void tf_dateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tf_dateMouseClicked
-        if(tf_date.getText().equals("Ex. 31/12/2018")){
-            tf_date.setText("");
-        }
-        if(tf_start.getText().equals("")){
-            tf_start.setText("Ex. 12:00");
-        }
-    }//GEN-LAST:event_tf_dateMouseClicked
-
-    private void tf_phonenumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_phonenumberActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tf_phonenumberActionPerformed
-
-    private void tf_otherActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_otherActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tf_otherActionPerformed
-
-    private void tf_name1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_name1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tf_name1ActionPerformed
-
-    private void tf_licenseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_licenseActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tf_licenseActionPerformed
-
     private void barMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_barMousePressed
         xMouse = evt.getX();
         yMouse = evt.getY();
     }//GEN-LAST:event_barMousePressed
-
     private void barMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_barMouseDragged
         int x = evt.getXOnScreen();
         int y = evt.getYOnScreen();
 
         this.setLocation(x - xMouse, y);
     }//GEN-LAST:event_barMouseDragged
-
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
         this.dispose();
     }//GEN-LAST:event_jLabel1MouseClicked
+    private void tf_name1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tf_name1FocusGained
+        if(tf_name1.getText().equals("-")){
+            tf_name1.setText("");
+        }
+        if(tf_date.getText().equals("")){
+            tf_date.setText("Ex. 31/12/2018");
+        }
+        if(tf_start.getText().equals("")){
+            tf_start.setText("Ex. 12:00");
+        }
+        if(tf_phonenumber.getText().equals("")){
+            tf_phonenumber.setText("-");
+        }
+    }//GEN-LAST:event_tf_name1FocusGained
 
+    private void tf_phonenumberFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tf_phonenumberFocusGained
+        if(tf_name1.getText().equals("")){
+            tf_name1.setText("-");
+        }
+        if(tf_date.getText().equals("")){
+            tf_date.setText("Ex. 31/12/2018");
+        }
+        if(tf_start.getText().equals("")){
+            tf_start.setText("Ex. 12:00");
+        }
+        if(tf_phonenumber.getText().equals("-")){
+            tf_phonenumber.setText("");
+        }
+    }//GEN-LAST:event_tf_phonenumberFocusGained
+
+    private void tf_dateFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tf_dateFocusGained
+        if(tf_name1.getText().equals("")){
+            tf_name1.setText("-");
+        }
+        if(tf_date.getText().equals("Ex. 31/12/2018")){
+            tf_date.setText("");
+        }
+        if(tf_start.getText().equals("")){
+            tf_start.setText("Ex. 12:00");
+        }
+        if(tf_phonenumber.getText().equals("")){
+            tf_phonenumber.setText("-");
+        }
+    }//GEN-LAST:event_tf_dateFocusGained
+
+    private void tf_startFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tf_startFocusGained
+        if(tf_name1.getText().equals("")){
+            tf_name1.setText("-");
+        }
+        if(tf_date.getText().equals("")){
+            tf_date.setText("Ex. 31/12/2018");
+        }
+        if(tf_start.getText().equals("Ex. 12:00")){
+            tf_start.setText("");
+        }
+        if(tf_phonenumber.getText().equals("")){
+            tf_phonenumber.setText("-");
+        }
+    }//GEN-LAST:event_tf_startFocusGained
+
+    private void tf_licenseFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tf_licenseFocusGained
+        if(tf_name1.getText().equals("")){
+            tf_name1.setText("-");
+        }
+        if(tf_date.getText().equals("")){
+            tf_date.setText("Ex. 31/12/2018");
+        }
+        if(tf_start.getText().equals("")){
+            tf_start.setText("Ex. 12:00");
+        }
+        if(tf_phonenumber.getText().equals("")){
+            tf_phonenumber.setText("-");
+        }
+    }//GEN-LAST:event_tf_licenseFocusGained
+
+    private void tf_otherFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tf_otherFocusGained
+        if(tf_name1.getText().equals("")){
+            tf_name1.setText("-");
+        }
+        if(tf_date.getText().equals("")){
+            tf_date.setText("Ex. 31/12/2018");
+        }
+        if(tf_start.getText().equals("")){
+            tf_start.setText("Ex. 12:00");
+        }
+        if(tf_phonenumber.getText().equals("")){
+            tf_phonenumber.setText("-");
+        }
+    }//GEN-LAST:event_tf_otherFocusGained
     public static void main(String args[]) {
 	DetailsBooking dt = new DetailsBooking();
 	dt.setVisible(true);

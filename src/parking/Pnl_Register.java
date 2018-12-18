@@ -11,10 +11,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Owen
- */
 public class Pnl_Register extends javax.swing.JPanel {
     private MainUser mu;
     
@@ -86,8 +82,10 @@ public class Pnl_Register extends javax.swing.JPanel {
         tf_conpass = new javax.swing.JPasswordField();
 
         setBackground(new java.awt.Color(153, 153, 255));
+        setMaximumSize(new java.awt.Dimension(710, 624));
         setMinimumSize(new java.awt.Dimension(710, 624));
         setPreferredSize(new java.awt.Dimension(710, 624));
+        setRequestFocusEnabled(false);
 
         jPanel1.setBackground(new java.awt.Color(62, 16, 136));
         jPanel1.setForeground(new java.awt.Color(255, 255, 254));
@@ -241,7 +239,7 @@ public class Pnl_Register extends javax.swing.JPanel {
         jLabel9.setText("Password");
 
         bn_isadmin.setBackground(new java.awt.Color(153, 153, 255));
-        bn_isadmin.setFont(new java.awt.Font("Dubai", 1, 14)); // NOI18N
+        bn_isadmin.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         bn_isadmin.setForeground(new java.awt.Color(35, 43, 43));
         bn_isadmin.setText("Admin");
         bn_isadmin.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -251,7 +249,7 @@ public class Pnl_Register extends javax.swing.JPanel {
         });
 
         bn_isstaff.setBackground(new java.awt.Color(153, 153, 255));
-        bn_isstaff.setFont(new java.awt.Font("Dubai", 1, 14)); // NOI18N
+        bn_isstaff.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         bn_isstaff.setForeground(new java.awt.Color(35, 43, 43));
         bn_isstaff.setText("Staff");
         bn_isstaff.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -261,7 +259,7 @@ public class Pnl_Register extends javax.swing.JPanel {
         });
 
         bn_ismember.setBackground(new java.awt.Color(153, 153, 255));
-        bn_ismember.setFont(new java.awt.Font("Dubai", 1, 14)); // NOI18N
+        bn_ismember.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         bn_ismember.setForeground(new java.awt.Color(35, 43, 43));
         bn_ismember.setText("Member");
         bn_ismember.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -305,41 +303,42 @@ public class Pnl_Register extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
+                .addGap(277, 277, 277)
+                .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
                 .addGap(36, 36, 36)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel2)
-                            .addComponent(tf_fname)
-                            .addComponent(tf_user)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(bn_isadmin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(19, 19, 19)
-                                .addComponent(bn_isstaff, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(bn_ismember, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel10)
-                            .addComponent(tf_conpass, javax.swing.GroupLayout.DEFAULT_SIZE, 285, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel9)
-                            .addComponent(jLabel5)
-                            .addComponent(tf_lastname)
-                            .addComponent(jLabel8)
-                            .addComponent(tf_phonenumber, javax.swing.GroupLayout.DEFAULT_SIZE, 285, Short.MAX_VALUE)
-                            .addComponent(tf_pass))
-                        .addGap(32, 32, 32))
+                        .addComponent(tf_phonenumber, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jLabel2)
+                                .addComponent(tf_fname)
+                                .addComponent(tf_user)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(bn_isadmin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addGap(19, 19, 19)
+                                    .addComponent(bn_isstaff, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(bn_ismember))
+                                .addComponent(jLabel10)
+                                .addComponent(tf_conpass, javax.swing.GroupLayout.DEFAULT_SIZE, 285, Short.MAX_VALUE))
+                            .addComponent(jLabel8))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jLabel9)
+                                .addComponent(jLabel5)
+                                .addComponent(tf_lastname, javax.swing.GroupLayout.DEFAULT_SIZE, 285, Short.MAX_VALUE)
+                                .addComponent(tf_pass))
                             .addComponent(jLabel7)
-                            .addComponent(tf_license, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(277, 277, 277)
-                .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 276, Short.MAX_VALUE))
+                            .addComponent(tf_license, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(32, 32, 32))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -360,29 +359,31 @@ public class Pnl_Register extends javax.swing.JPanel {
                         .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(tf_pass)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tf_conpass, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tf_license, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf_conpass, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(tf_fname, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(tf_license, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tf_phonenumber, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(tf_lastname, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(tf_phonenumber, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
                 .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(78, 78, 78))
         );
@@ -395,19 +396,19 @@ public class Pnl_Register extends javax.swing.JPanel {
         if(tf_phonenumber.getText().equals("")){
             tf_phonenumber.setText("Phone number");
         }
-        if(tf_license.getText().equals("")){
+        if(tf_license.getText().equals("") && bn_ismember.isSelected()){
             tf_license.setText("License plate");
         }
         if(tf_lastname.getText().equals("")){
             tf_lastname.setText("Lastname");
         }
-        if(tf_user.getText().equals("")){
+        if(tf_user.getText().equals("") && !(bn_ismember.isSelected())){
             tf_user.setText("Username");
         }
-        if(tf_pass.getText().equals("")){
+        if(tf_pass.getText().equals("") && !(bn_ismember.isSelected())){
             tf_pass.setText("Password");
         }
-        if(tf_conpass.getText().equals("")){
+        if(tf_conpass.getText().equals("") && !(bn_ismember.isSelected())){
             tf_conpass.setText("Password");
         }
     }//GEN-LAST:event_tf_fnameFocusGained
@@ -420,19 +421,19 @@ public class Pnl_Register extends javax.swing.JPanel {
         if(tf_phonenumber.getText().equals("Phone number")){
             tf_phonenumber.setText("");
         }
-        if(tf_license.getText().equals("")){
+        if(tf_license.getText().equals("") && bn_ismember.isSelected()){
             tf_license.setText("License plate");
         }
         if(tf_lastname.getText().equals("")){
             tf_lastname.setText("Lastname");
         }
-        if(tf_user.getText().equals("")){
+        if(tf_user.getText().equals("") && !(bn_ismember.isSelected())){
             tf_user.setText("Username");
         }
-        if(tf_pass.getText().equals("")){
+        if(tf_pass.getText().equals("") && !(bn_ismember.isSelected())){
             tf_pass.setText("Password");
         }
-        if(tf_conpass.getText().equals("")){
+        if(tf_conpass.getText().equals("") && !(bn_ismember.isSelected())){
             tf_conpass.setText("Password");
         }
         if(tf_fname.getText().equals("")){
@@ -445,7 +446,7 @@ public class Pnl_Register extends javax.swing.JPanel {
     }//GEN-LAST:event_tf_phonenumberActionPerformed
 
     private void tf_licenseFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tf_licenseFocusGained
-        if(tf_license.getText().equals("License plate")){
+        if(tf_license.getText().equals("License plate") && bn_ismember.isSelected()){
             tf_license.setText("");
         }
         if(tf_phonenumber.getText().equals("")){
@@ -454,13 +455,13 @@ public class Pnl_Register extends javax.swing.JPanel {
         if(tf_lastname.getText().equals("")){
             tf_lastname.setText("Lastname");
         }
-        if(tf_user.getText().equals("")){
+        if(tf_user.getText().equals("") && !(bn_ismember.isSelected())){
             tf_user.setText("Username");
         }
-        if(tf_pass.getText().equals("")){
+        if(tf_pass.getText().equals("") && !(bn_ismember.isSelected())){
             tf_pass.setText("Password");
         }
-        if(tf_conpass.getText().equals("")){
+        if(tf_conpass.getText().equals("") && !(bn_ismember.isSelected())){
             tf_conpass.setText("Password");
         }
         if(tf_fname.getText().equals("")){
@@ -481,16 +482,22 @@ public class Pnl_Register extends javax.swing.JPanel {
 	String pass1 = tf_pass.getText();
 	String conpass1 = tf_conpass.getText();
 
-        if(fname1.equals("")){
+        if(lname1.equals(""+"Username") && (bn_isadmin.isSelected() || bn_isstaff.isSelected())){
+	    JOptionPane.showMessageDialog(null, "Please enter username");
+	}
+        else if(fname1.equals(""+"Firstname")){
             JOptionPane.showMessageDialog(null, "Please enter firstname");
         }
-	else if(lname1.equals("")){
+	else if(lname1.equals(""+"Lastname")){
 	    JOptionPane.showMessageDialog(null, "Please enter lastname");
 	}
-        else if(license1.equals("") && bn_ismember.isSelected()){
+        else if(lname1.equals(""+"Password")){
+	    JOptionPane.showMessageDialog(null, "Please enter password");
+	}
+        else if(license1.equals(""+"License plate") && bn_ismember.isSelected()){
             JOptionPane.showMessageDialog(null, "Please enter car license");
         }
-        else if(phonenumber1.equals("")){
+        else if(phonenumber1.equals(""+"Phone number")){
             JOptionPane.showMessageDialog(null, "Please enter phonenumber");
         }
 	else if(!conpass1.equals(pass1)){
@@ -566,16 +573,16 @@ public class Pnl_Register extends javax.swing.JPanel {
         if(tf_phonenumber.getText().equals("")){
             tf_phonenumber.setText("Phone number");
         }
-        if(tf_license.getText().equals("")){
+        if(tf_license.getText().equals("") && bn_ismember.isSelected()){
             tf_license.setText("License plate");
         }
-        if(tf_user.getText().equals("")){
+        if(tf_user.getText().equals("") && !(bn_ismember.isSelected())){
             tf_user.setText("Username");
         }
-        if(tf_pass.getText().equals("")){
+        if(tf_pass.getText().equals("") && !(bn_ismember.isSelected())){
             tf_pass.setText("Password");
         }
-        if(tf_conpass.getText().equals("")){
+        if(tf_conpass.getText().equals("") && !(bn_ismember.isSelected())){
             tf_conpass.setText("Password");
         }
         if(tf_fname.getText().equals("")){
@@ -588,22 +595,22 @@ public class Pnl_Register extends javax.swing.JPanel {
     }//GEN-LAST:event_tf_lastnameActionPerformed
 
     private void tf_userFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tf_userFocusGained
-        if(tf_user.getText().equals("Username")){
+        if(tf_user.getText().equals("Username") && !(bn_ismember.isSelected())){
             tf_user.setText("");
         }
         if(tf_phonenumber.getText().equals("")){
             tf_phonenumber.setText("Phone number");
         }
-        if(tf_license.getText().equals("")){
+        if(tf_license.getText().equals("") && bn_ismember.isSelected()){
             tf_license.setText("License plate");
         }
         if(tf_lastname.getText().equals("")){
             tf_lastname.setText("Lastname");
         }
-        if(tf_pass.getText().equals("")){
+        if(tf_pass.getText().equals("") && !(bn_ismember.isSelected())){
             tf_pass.setText("Password");
         }
-        if(tf_conpass.getText().equals("")){
+        if(tf_conpass.getText().equals("") && !(bn_ismember.isSelected())){
             tf_conpass.setText("Password");
         }
         if(tf_fname.getText().equals("")){
@@ -655,22 +662,22 @@ public class Pnl_Register extends javax.swing.JPanel {
     }//GEN-LAST:event_bn_ismemberMouseClicked
 
     private void tf_passFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tf_passFocusGained
-        if(tf_pass.getText().equals("Password")){
+        if(tf_pass.getText().equals("Password") && !(bn_ismember.isSelected())){
             tf_pass.setText("");
         }
         if(tf_phonenumber.getText().equals("")){
             tf_phonenumber.setText("Phone number");
         }
-        if(tf_license.getText().equals("")){
+        if(tf_license.getText().equals("") && bn_ismember.isSelected()){
             tf_license.setText("License plate");
         }
         if(tf_lastname.getText().equals("")){
             tf_lastname.setText("Lastname");
         }
-        if(tf_user.getText().equals("")){
+        if(tf_user.getText().equals("") && !(bn_ismember.isSelected())){
             tf_user.setText("Username");
         }
-        if(tf_conpass.getText().equals("")){
+        if(tf_conpass.getText().equals("") && !(bn_ismember.isSelected())){
             tf_conpass.setText("Password");
         }
         if(tf_fname.getText().equals("")){
@@ -679,22 +686,22 @@ public class Pnl_Register extends javax.swing.JPanel {
     }//GEN-LAST:event_tf_passFocusGained
 
     private void tf_conpassFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tf_conpassFocusGained
-        if(tf_conpass.getText().equals("Password")){
+        if(tf_conpass.getText().equals("Password") && !(bn_ismember.isSelected())){
             tf_conpass.setText("");
         }
         if(tf_phonenumber.getText().equals("")){
             tf_phonenumber.setText("Phone number");
         }
-        if(tf_license.getText().equals("")){
+        if(tf_license.getText().equals("") && bn_ismember.isSelected()){
             tf_license.setText("License plate");
         }
         if(tf_lastname.getText().equals("")){
             tf_lastname.setText("Lastname");
         }
-        if(tf_user.getText().equals("")){
+        if(tf_user.getText().equals("") && !(bn_ismember.isSelected())){
             tf_user.setText("Username");
         }
-        if(tf_pass.getText().equals("")){
+        if(tf_pass.getText().equals("") && !(bn_ismember.isSelected())){
             tf_pass.setText("Password");
         }
         if(tf_fname.getText().equals("")){

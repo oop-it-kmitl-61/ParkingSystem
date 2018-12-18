@@ -78,6 +78,7 @@ public class Pnl_Checkin extends javax.swing.JPanel {
         bn_checkin = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(153, 153, 255));
+        setMaximumSize(new java.awt.Dimension(710, 624));
         setMinimumSize(new java.awt.Dimension(710, 624));
         setPreferredSize(new java.awt.Dimension(710, 624));
 

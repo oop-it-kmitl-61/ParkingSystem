@@ -46,6 +46,7 @@ public class SetupDatabase extends javax.swing.JFrame {
         bn_save1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(446, 312));
         setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(153, 153, 255));

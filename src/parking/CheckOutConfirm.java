@@ -71,11 +71,12 @@ public class CheckOutConfirm extends javax.swing.JFrame {
         bn_checkout = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(508, 463));
         setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(153, 153, 255));
 
-        bar.setBackground(new java.awt.Color(102, 0, 204));
+        bar.setBackground(new java.awt.Color(62, 16, 136));
         bar.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
                 barMouseDragged(evt);

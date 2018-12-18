@@ -52,8 +52,9 @@ public class Pnl_Profile extends javax.swing.JPanel {
         jLabel4 = new javax.swing.JLabel();
         tf_rank = new javax.swing.JTextField();
 
-        setBackground(new java.awt.Color(204, 204, 255));
+        setBackground(new java.awt.Color(153, 153, 255));
         setForeground(new java.awt.Color(35, 43, 43));
+        setMaximumSize(new java.awt.Dimension(710, 624));
         setMinimumSize(new java.awt.Dimension(710, 624));
         setPreferredSize(new java.awt.Dimension(710, 624));
         setRequestFocusEnabled(false);
@@ -217,7 +218,7 @@ public class Pnl_Profile extends javax.swing.JPanel {
             }
         });
 
-        bn_isaddminorstaff.setBackground(new java.awt.Color(204, 204, 255));
+        bn_isaddminorstaff.setBackground(new java.awt.Color(153, 153, 255));
         bn_isaddminorstaff.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         bn_isaddminorstaff.setForeground(new java.awt.Color(35, 43, 43));
         bn_isaddminorstaff.setText("Admin Or Staff");
@@ -227,7 +228,7 @@ public class Pnl_Profile extends javax.swing.JPanel {
             }
         });
 
-        bn_ismember.setBackground(new java.awt.Color(204, 204, 255));
+        bn_ismember.setBackground(new java.awt.Color(153, 153, 255));
         bn_ismember.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         bn_ismember.setForeground(new java.awt.Color(35, 43, 43));
         bn_ismember.setText("Member");
@@ -370,13 +371,6 @@ public class Pnl_Profile extends javax.swing.JPanel {
     }//GEN-LAST:event_tf_fnameActionPerformed
 
     private void tf_userFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tf_userFocusGained
-        if(bn_isaddminorstaff.isSelected()){
-            tf_license.setText("License plate");
-        }
-        if(bn_ismember.isSelected()){
-            tf_user.setText("Username");
-            tf_rank.setText("Rank");
-        }
         if(tf_user.getText().equals("Username") && !(bn_ismember.isSelected())){
             tf_user.setText("");
         }
@@ -402,13 +396,6 @@ public class Pnl_Profile extends javax.swing.JPanel {
     }//GEN-LAST:event_tf_userActionPerformed
 
     private void tf_licenseFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tf_licenseFocusGained
-        if(bn_isaddminorstaff.isSelected()){
-            tf_license.setText("License plate");
-        }
-        if(bn_ismember.isSelected()){
-            tf_user.setText("Username");
-            tf_rank.setText("Rank");
-        }
         if(tf_license.getText().equals("License plate") && !(bn_isaddminorstaff.isSelected())){
             tf_license.setText("");
         }
@@ -434,13 +421,6 @@ public class Pnl_Profile extends javax.swing.JPanel {
     }//GEN-LAST:event_tf_licenseActionPerformed
 
     private void tf_phonenumberFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tf_phonenumberFocusGained
-        if(bn_isaddminorstaff.isSelected()){
-            tf_license.setText("License plate");
-        }
-        if(bn_ismember.isSelected()){
-            tf_user.setText("Username");
-            tf_rank.setText("Rank");
-        }
         if(tf_phonenumber.getText().equals("Phone number")){
             tf_phonenumber.setText("");
         }
@@ -498,7 +478,7 @@ public class Pnl_Profile extends javax.swing.JPanel {
 		System.out.println(ex);
 	    }
 	}else{
-	    JOptionPane.showMessageDialog(null, "Please select rank");
+	    JOptionPane.showMessageDialog(null, "Please select 'Admin Or Staff' or 'Member'");
 	}
     }//GEN-LAST:event_updateActionPerformed
 
@@ -523,7 +503,7 @@ public class Pnl_Profile extends javax.swing.JPanel {
 	    System.out.println(e);
 	}
 	}else{
-	    JOptionPane.showMessageDialog(null, "Please select rank");
+	    JOptionPane.showMessageDialog(null, "Please select 'Admin Or Staff' or 'Member'");
 	}
     }//GEN-LAST:event_searchUserActionPerformed
 
@@ -536,13 +516,13 @@ public class Pnl_Profile extends javax.swing.JPanel {
 	    pst.setString(1, tf_phonenumber.getText());
 	    ResultSet rs_data = pst.executeQuery();
 		if(rs_data.next()){
-		    JOptionPane.showMessageDialog(null, "Found data from this username");
+		    JOptionPane.showMessageDialog(null, "Found data from this phonenumber");
 		    tf_user.setText(rs_data.getString("user"));
 		    tf_fname.setText(rs_data.getString("firstname"));
 		    tf_lname.setText(rs_data.getString("lastname"));
 		    tf_rank.setText(rs_data.getString("rank"));
 		}else{
-		    JOptionPane.showMessageDialog(null, "Not found data from this username");
+		    JOptionPane.showMessageDialog(null, "Not found data from this phonenumber");
 		}
 	    }catch(Exception e){
 		System.out.println(e);
@@ -555,7 +535,7 @@ public class Pnl_Profile extends javax.swing.JPanel {
 	    pst.setString(1, tf_phonenumber.getText());
 	    ResultSet rs_data = pst.executeQuery();
 	    if(rs_data.next()){
-		JOptionPane.showMessageDialog(null, "Found data from this number");
+		JOptionPane.showMessageDialog(null, "Found data from this phonenumber");
 		tf_fname.setText(rs_data.getString("firstname"));
 		tf_lname.setText(rs_data.getString("lastname"));
 		tf_license.setText(rs_data.getString("license"));
@@ -567,18 +547,11 @@ public class Pnl_Profile extends javax.swing.JPanel {
 	    }
 	}
 	else{
-	    JOptionPane.showMessageDialog(null, "Please select rank");
+	    JOptionPane.showMessageDialog(null, "Please select 'Admin Or Staff' or 'Member'");
 	}
     }//GEN-LAST:event_searchPhoneActionPerformed
 
     private void tf_lnameFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tf_lnameFocusGained
-        if(bn_isaddminorstaff.isSelected()){
-            tf_license.setText("License plate");
-        }
-        if(bn_ismember.isSelected()){
-            tf_user.setText("Username");
-            tf_rank.setText("Rank");
-        }
         if(tf_lname.getText().equals("Lastname")){
             tf_lname.setText("");
         }
@@ -629,13 +602,6 @@ public class Pnl_Profile extends javax.swing.JPanel {
     }//GEN-LAST:event_bn_ismemberMouseClicked
 
     private void tf_rankFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_tf_rankFocusGained
-        if(bn_isaddminorstaff.isSelected()){
-            tf_license.setText("License plate");
-        }
-        if(bn_ismember.isSelected()){
-            tf_user.setText("Username");
-            tf_rank.setText("Rank");
-        }
         if(tf_rank.getText().equals("Rank") && !(bn_ismember.isSelected())){
             tf_rank.setText("");
         }

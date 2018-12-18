@@ -100,6 +100,7 @@ public class Pnl_Checkout extends javax.swing.JPanel {
         bn_showall = new javax.swing.JCheckBox();
 
         setBackground(new java.awt.Color(153, 153, 255));
+        setMaximumSize(new java.awt.Dimension(710, 624));
         setMinimumSize(new java.awt.Dimension(710, 624));
         setPreferredSize(new java.awt.Dimension(710, 624));
 
